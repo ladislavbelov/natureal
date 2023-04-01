@@ -6,6 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/lightslider.css">
+    <!-- This layout was made for WP theme, so I use jquery for slider. Please use another slider without dependencies otherwise for best performance  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/lightslider.min.js"></script>
+    <style>
+    	ul{
+			list-style: none outside none;
+		    padding-left: 0;
+            margin: 0;
+		}
+        .demo .item{
+            margin-bottom: 60px;
+        }
+		.content-slider li{
+		    background-color: #ed3020;
+		    text-align: center;
+		    color: #FFF;
+		}
+		.content-slider h3 {
+		    margin: 0;
+		    padding: 70px 0;
+		}
+		.demo{
+			width: 800px;
+		}
+    </style>
+    <script>
+        $(document).ready(function() {
+           $("#content-slider").lightSlider({
+               loop:true,
+               keyPress:true
+           });
+           $('#image-gallery').lightSlider({
+               gallery:true,
+               item:1,
+               thumbItem:9,
+               slideMargin: 0,
+               speed:500,
+               auto:true,
+               loop:true,
+               onSliderLoad: function() {
+                   $('#image-gallery').removeClass('cS-hidden');
+               }  
+           });
+       });
+   </script>
 </head>
 <body>
     <header class="header container">
@@ -50,15 +96,141 @@
         </section>
 
         <section class="index__advantages">
+            <div class="left-spacer">
+                <div class="index__advantages-left">
+                    <div class="advantages-left">
+                        <picture>
+                            <source srcset="assets/images/Rectangle441.webp" type="image/webp" />
+                            <img src="assets/images/Rectangle441.jpg" alt="photo" />
+                        </picture>
+                        <h3 class="advantages-left__header">Rollendes<br>Flaschenspiel</h3>
+                    </div>
 
+                    <div class="advantages-left">
+                        <picture>
+                            <source srcset="assets/images/Rectangle397.webp" type="image/webp" />
+                            <img src="assets/images/Rectangle397.jpg" alt="photo" />
+                        </picture>
+                        <picture class="advantages-left__logo">
+                            <source srcset="assets/images/Group1063.webp" type="image/webp" />
+                            <img src="assets/images/Group1063.jpg" alt="photo" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-spacer">
+                <div class="index__advantages-list">
+                    <div class="index__advantages-item advantage-one">
+                        <div class="index__advantages-text__container">
+                            <svg width="20" height="48" viewBox="0 0 20 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.05 47.8125H19.832V0.912497H15.477L0.871 12.4365V14.0445L10.05 7.0095V47.8125Z" fill="#653726"/>
+                            </svg>
+                            <p class="index__advantages-text">We believe that beautiful skin is a<br> reflection of holistic health</p>
+                        </div>
+                        <div class="index__advantages-img__container">
+                            <picture>
+                                <source srcset="assets/images/Group1097.webp" type="image/webp" />
+                                <img src="assets/images/Group1097.jpg" alt="photo" />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="index__advantages-item advantage-top-separator">
+                        <picture>
+                            <source srcset="assets/images/Group1101.webp" type="image/webp" />
+                            <img src="assets/images/Group1101.png" alt="photo" />
+                        </picture>
+                    </div>    
+                    <div class="index__advantages-item advantage-two">
+                        <div class="index__advantages-text__container">
+                            <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.68 48.8125H38.133V39.9685H13.008L19.172 35.6805C29.557 28.7125 38.133 22.5485 38.133 14.7765C38.133 6.4685 30.294 0.907498 19.105 0.907498C7.916 0.907498 0.211 6.6695 0.211 14.9105C0.211 23.0845 7.983 28.8465 19.105 28.8465C21.852 28.8465 24.398 27.9755 26.341 26.5685C24.599 29.3155 21.517 32.3975 19.105 34.2065L0.68 47.7405V48.8125ZM19.105 27.7075C13.544 27.7075 9.792 22.5485 9.792 14.9105C9.792 7.0715 13.544 1.8455 19.105 1.8455C24.666 1.8455 28.552 6.6695 28.552 16.3175C28.552 22.4815 25.537 27.7075 19.105 27.7075Z" fill="#653726"/>
+                            </svg>
+                            <p class="index__advantages-text">Our cosmetics are based on the purest<br>plant ingridients.</p>
+                        </div>
+                        <div class="index__advantages-img__container">
+                            <picture>
+                                <source srcset="assets/images/Group1098.webp" type="image/webp" />
+                                <img src="assets/images/Group1098.jpg" alt="photo" />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="index__advantages-item advantage-bottom-separator">
+                        <picture>
+                            <source srcset="assets/images/Group1102.webp" type="image/webp" />
+                            <img src="assets/images/Group1102.png" alt="photo" />
+                        </picture>
+                    </div> 
+                    <div class="index__advantages-item advantage-three">
+                        <div class="index__advantages-text__container">
+                            <svg width="37" height="49" viewBox="0 0 37 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.425 48.6165C29.15 48.6165 35.85 42.1175 35.85 33.9435C35.85 26.0375 29.284 21.2805 21.11 21.2805C18.899 21.2805 16.688 21.6825 14.477 22.6875L36.118 2.1855V0.912497H2.618V9.7565H26.269L10.457 24.7645L11.395 25.7695L11.797 25.4345C13.673 24.0275 15.884 23.0895 18.028 23.0895C23.12 23.0895 26.068 27.7795 26.068 33.6755C26.068 40.3085 22.383 45.8695 14.946 45.8695C7.911 45.8695 2.752 41.3135 2.015 34.0105H0.742C1.345 42.5195 7.844 48.6165 17.425 48.6165Z" fill="#653726"/>
+                            </svg>
+                            <p class="index__advantages-text">Each of our formulations is designed to<br>restore the skin to it's optimal condition.</p>
+                        </div>
+                        <div class="index__advantages-img__container">
+                            <picture>
+                                <source srcset="assets/images/Group1099.webp" type="image/webp" />
+                                <img src="assets/images/Group1099.jpg" alt="photo" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
         <section class="index__how">
-
+            <h2 class="index__how-header">Einzigartige On Scroll Elemente</h2>
+            <div class="index__how-items">   
+                <div class="index__how-item index__how-left">
+                    <picture>
+                        <source srcset="assets/images/Group1100.webp" type="image/webp" />
+                        <img src="assets/images/Group1100.png" alt="photo" />
+                    </picture>
+                    <p class="index__how-text">Making girls confident in ourselves and take care of their skin</p>
+                </div>
+                <div class="index__how-item index__how-middle">
+                    <picture>
+                        <source srcset="assets/images/Group1053.webp" type="image/webp" />
+                        <img src="assets/images/Group1053.png" alt="photo" />
+                    </picture>
+                    <p class="index__how-text">We produce affordable combinations of high quality care</p>
+                </div>
+                <div class="index__how-item index__how-right">
+                    <picture>
+                        <source srcset="assets/images/Group1054.webp" type="image/webp" />
+                        <img src="assets/images/Group1054.png" alt="photo" />
+                    </picture>
+                    <p class="index__how-text">We work with the best technologists & implement innovations</p>
+                </div>
+            </div>
         </section>
 
         <section class="index__gallery">
-
+            <h2 class="index__gallery-heading">Entdecke weitere Bewertungen.</h2>
+            <div class="demo">
+                <div class="item">
+                    <ul id="content-slider" class="content-slider">
+                        <li>
+                            <h3>1</h3>
+                        </li>
+                        <li>
+                            <h3>2</h3>
+                        </li>
+                        <li>
+                            <h3>3</h3>
+                        </li>
+                        <li>
+                            <h3>4</h3>
+                        </li>
+                        <li>
+                            <h3>5</h3>
+                        </li>
+                        <li>
+                            <h3>6</h3>
+                        </li>
+                    </ul>
+                </div>
+        
+            </div>	
         </section>
         
         <section class="index__contact contact-form">
@@ -72,6 +244,8 @@
     <footer class="footer">
 
     </footer>
+
+
 
     <script src="assets/js/main.js"></script>
 </body>

@@ -178,7 +178,7 @@ body {
 section {
     display: flex;
 }
-h2 {
+h2,h3 {
     color: #424242;
     font-family: "KyivType Sans", Sans-serif;
     font-weight: 300;
@@ -198,10 +198,10 @@ a:hover {
 }
 .container {
   display: grid;
-  grid-template-columns: 19% 58% 23%;
+  grid-template-columns: 18.8% 58.5% 22.7%;
 }
 
-/* -------------------------------header-------------------------------------- */
+/* ---------------------------------------------------------------------header-------------------------------------------------------- */
 .header__logo {
   margin: 33px 0 33px 0;
 }
@@ -240,8 +240,8 @@ nav.right-spacer {
     border-bottom: 1px solid #AD8B7F;
 }
 
-/* -------------------------------intro-section-------------------------------------- */
-.index__intro {
+/* --------------------------------------------------------------intro-section------------------------------------------------------- */
+.index__intro, .index__advantages {
     border-bottom: 1px solid #AD8B7F;
 }
 .index__intro-image {
@@ -274,7 +274,6 @@ nav.right-spacer {
   z-index: 2;
 }
 
-
 .btnUp{
   color: #ffffff;
   line-height: 50px;
@@ -289,20 +288,153 @@ nav.right-spacer {
   font-size: 25px;
   border-radius: 50%;
   background: linear-gradient(0deg, #ad8b7fad, transparent 79px);
+  z-index: 9999;
 }
-
 .btnUp-open{
   display: block;
 }
-
-
-
 .index__advantages {
-  padding: 500px;
+  display: grid;
+  grid-template-columns: 18.8% 81.2%;
+}
+.index__advantages-left {
+  flex-direction: column;
+  z-index: 2;
+  background-color: #FDFAF9;
+  margin-top: 257px;
+  margin-left: 50px;
+  margin-bottom: 255px;
+}
+.index__advantages .mid-spacer {
+  border-right: none;
+  align-items: flex-end;
+}
+.advantages-left {
+  position: relative;
+  margin-bottom: -5px;
+}
+.advantages-left:first-child {
+  margin-bottom: 48px;
+}
+.advantages-left__header {
+  position: absolute;
+  color: #fff;
+  top: 2%;
+  left: 15%;
+  font-size: 76px;
+  text-align: center;
+  line-height: 76px;
+}
+.advantages-left__logo {
+  position: absolute;
+  bottom: -20%;
+  right: 3%; 
+}
+.index__advantages-text {
+  padding-left: 29px;
+  font-size: 22px;
+  letter-spacing: -.46px;
+  line-height: 32px;
+}
+.index__advantages-list {
+  flex-direction: column;
+  width: 67%;
+  margin-top: 210px;
+}
+.index__advantages-text__container {
+  align-items: center;
+}
+.index__advantages-item {
+  align-items: center;
+  justify-content: space-between;
+}
+.advantage-one .index__advantages-img__container {
+  margin-right: 40px;
+  margin-top: 75px;
+}
+.advantage-one {
+  margin-left: 115px;
+}
+.advantage-two {
+  flex-direction: row-reverse;
+}
+.advantage-top-separator {
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: -25px;
+}
+.advantage-two .index__advantages-img__container {
+  margin-top: 20px;
+}
+.advantage-two .index__advantages-text__container {
+    margin-top: 35px;
+    margin-right: 147px;
+}
+.advantage-bottom-separator {
+  justify-content: center;
+  margin-top: 14px;
+  margin-left: -24px;
+}
+.advantage-three {
+  margin-top: -19px;
+  margin-left: 116px;
+  margin-right: 13px;
+}
+.advantage-three .index__advantages-text {
+  padding-left: 23px;
+}
+.advantage-three .index__advantages-img__container {
+  margin-top: 5px;
 }
 
-
-
+/* ---------------------------------------------------------index__how------------------------------------------------- */
+.index__how {
+  flex-direction: column;
+}
+.index__how-header {
+  font-size: 96px;
+  line-height: 98px;
+  margin-top: 104px;
+  margin-left: 36px;
+  margin-bottom: 84px;
+}
+.index__how-item {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.index__how-text {
+  font-size: 45px;
+  line-height: 50px;
+  text-align: center;
+  width: 83%;
+  margin-top: 87px;
+  margin-left: 49px;
+  position: relative;
+}
+.index__how-item img {
+  margin-bottom: -63px;
+}
+.index__how-left img {
+  margin-left: 89px;
+  margin-top: -52px;
+}
+.index__how-left .index__how-text {
+  margin-left: 97px;
+}
+.index__how-middle img {
+  margin-left: 137px;
+}
+.index__how-right img {
+  margin-left: 6px;
+  margin-top: 25px;
+}
+.index__how-text::after {
+  content: '';
+  width: 158px;
+  display: flex;
+  border-bottom: 1px solid #AD8B7F;
+  margin: 24px auto;
+}
 
 
 
